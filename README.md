@@ -19,8 +19,8 @@ In the sidebar
 ## Local Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/team-root-bingo-sheet-generator.git
-cd team-root-bingo-sheet-generator
+git clone https://github.com/cdenq/root-bingo.git
+cd root-bingo
 ```
 
 1. Make a new envs:
