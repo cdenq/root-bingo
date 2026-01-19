@@ -48,7 +48,7 @@ def display_achievements_list(achievements_dict):
 # RENDER MAIN
 # ----------------------------------
 def render():
-    st.title("Achievements List")
+    st.title("Bingo Wiki")
     st.markdown("---")
 
     achievements = load_achievements()

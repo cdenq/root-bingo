@@ -1,11 +1,13 @@
-# Team Root Bingo Sheet Generator
+<img src="assets/tofu.png" width="100">
+
+# Tofu's Root Bingo Generator
 
 Browser app for generating bingo sheets for Root the board game. 
 
 Create randomized bingo cards and export them as PDFs for printing. Race either solo or as a team to complete all the items in Root games to claim Bingo victory!
 
 ## Usage
-Visit the website here: .
+Visit the website here: https://tofu-root-bingo.streamlit.app/.
 
 In the sidebar
 - `Bingo Sheet`: generates the bingo items
@@ -14,7 +16,7 @@ In the sidebar
     - `Filters`: Allows people to pick which subset of bingo items they want to focus on
 - `Bingo Wiki`: shows the pool of all possible items
 
-## Installation
+## Local Installation
 1. Clone the repository:
 ```bash
 git clone https://github.com/your-username/team-root-bingo-sheet-generator.git
@@ -62,3 +64,6 @@ team-root-bingo-sheet-generator/
 │   └── icons/             # Achievement icons
 └── requirements.txt
 ```
+
+## Contact
+Discord: `tofuwater__`

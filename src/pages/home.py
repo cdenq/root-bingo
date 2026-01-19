@@ -2,11 +2,13 @@
 # IMPORTS
 # ----------------------------------
 import streamlit as st
+from config.settings import TOFU_IMAGE
 
 # ----------------------------------
 # RENDER MAIN
 # ----------------------------------
 def render():
-    st.title("Root Bingo!")
+    st.image(str(TOFU_IMAGE), width=150)
+    st.title("Tofu's Root Bingo Generator")
     st.markdown("---")
-    st.write("Tofu Root bingo generator for team play. See sidebar.")
+    st.write("Bingo generator for Root. Navigate via sidebar.")
