@@ -9,8 +9,7 @@ from src.components import sidebar
 # ----------------------------------
 def page_setup():
     st.set_page_config(
-        page_title="Team Root Bingo",
-        page_icon="🎯",
+        page_title="Tofu's Root Bingo",
         layout="wide",
         initial_sidebar_state="expanded"
     )

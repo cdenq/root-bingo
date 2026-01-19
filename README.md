@@ -43,27 +43,25 @@ streamlit run app.py
 
 ```
 team-root-bingo-sheet-generator/
-├── app.py                 # Main application entry point
+├── app.py                   # Main application entry point
 ├── config/
-│   └── settings.py        # Configuration constants
+│   └── settings.py          # Configuration constants
 ├── src/
 │   ├── components/
-│   │   ├── filter.py      # Filter component
-│   │   └── sidebar.py     # Sidebar navigation
+│   │   ├── filter.py        # Filter component
+│   │   └── sidebar.py       # Sidebar navigation
 │   ├── pages/
-│   │   ├── achievements.py # Achievement wiki page
-│   │   ├── bingo.py       # Bingo sheet generator page
-│   │   └── home.py        # Home page
+│   │   ├── achievements.py  # Bingo items directory
+│   │   ├── bingo.py         # Bingo sheet generator page
+│   │   └── home.py          # Home page
 │   └── utils/
 │       ├── data_ingestor.py # Excel to JSON conversion
 │       └── data_loader.py   # Data loading utilities
 ├── data/
-│   ├── achievements.xlsx  # Source achievement data
-│   └── achievements.json  # Processed achievement data
+│   ├── achievements.xlsx    # Source bingo item DB
+│   └── achievements.json    # Processed bingo items data
 ├── assets/
-│   └── icons/             # Achievement icons
+│   ├── icons/               # Bing item icons
+│   └── tofu.png             # Tofu  
 └── requirements.txt
 ```
-
-## Contact
-Discord: `tofuwater__`
