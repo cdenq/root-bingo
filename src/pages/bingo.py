@@ -38,7 +38,12 @@ def get_bingo_achievement_id(achievements, difficulty):
 
 def get_achievements_pool(achievements, selected_cat1, selected_faction_cat2, difficulty):
     pool = []
-    valid_modes = ["Both", "Normal"] if difficulty == "n" else ["Both", "Elite"]
+    if difficulty == "m":
+        valid_modes = ["Both", "Normal", "Elite"]
+    elif difficulty == "n":
+        valid_modes = ["Both", "Normal"]
+    else:
+        valid_modes = ["Both", "Elite"]
 
     for cat1 in selected_cat1:
         if cat1 not in achievements:
@@ -89,6 +94,113 @@ def group_pool_by_bucket(pool):
         buckets[key].append(item)
 
     return buckets
+
+
+def mixed_sample_from_bucket(bucket_items, count, rng):
+    """
+    Sample from a bucket for mixed mode.
+    First half draws from Normal + Both (Both items get normal difficulty).
+    Second half draws from Elite + Both (Both items get elite difficulty).
+    Items from Both can only be drawn once (no replacement across phases).
+    Returns list of (item, is_elite) tuples.
+    """
+    if count <= 0:
+        return []
+
+    normal_count = (count + 1) // 2
+    elite_count = count - normal_count
+
+    normal_items = [item for item in bucket_items if item["data"].get("mode") == "Normal"]
+    elite_items = [item for item in bucket_items if item["data"].get("mode") == "Elite"]
+    both_items = [item for item in bucket_items if item["data"].get("mode") == "Both"]
+
+    rng.shuffle(normal_items)
+    rng.shuffle(elite_items)
+    rng.shuffle(both_items)
+
+    result = []
+    used_both_ids = set()
+
+    normal_pool = normal_items + both_items
+    rng.shuffle(normal_pool)
+
+    drawn_normal = 0
+    for item in normal_pool:
+        if drawn_normal >= normal_count:
+            break
+        if item["data"].get("mode") == "Both":
+            if item["id"] not in used_both_ids:
+                result.append((item, False))
+                used_both_ids.add(item["id"])
+                drawn_normal += 1
+        else:
+            result.append((item, False))
+            drawn_normal += 1
+
+    elite_pool = elite_items + [item for item in both_items if item["id"] not in used_both_ids]
+    rng.shuffle(elite_pool)
+
+    drawn_elite = 0
+    for item in elite_pool:
+        if drawn_elite >= elite_count:
+            break
+        if item["data"].get("mode") == "Both":
+            if item["id"] not in used_both_ids:
+                result.append((item, True))
+                used_both_ids.add(item["id"])
+                drawn_elite += 1
+        else:
+            result.append((item, True))
+            drawn_elite += 1
+
+    return result
+
+
+def sample_from_buckets_mixed(buckets, total_needed, rng):
+    """
+    Sample from buckets for mixed mode.
+    Returns list of items with is_elite flag.
+    """
+    if not buckets:
+        return []
+
+    num_buckets = len(buckets)
+    base_per_bucket = total_needed // num_buckets
+    remainder = total_needed % num_buckets
+
+    sampled = []
+    sampled_ids = set()
+
+    bucket_names = list(buckets.keys())
+    rng.shuffle(bucket_names)
+
+    remaining_items = []
+
+    for i, bucket_name in enumerate(bucket_names):
+        bucket = buckets[bucket_name].copy()
+        count = base_per_bucket + (1 if i < remainder else 0)
+
+        bucket_result = mixed_sample_from_bucket(bucket, count, rng)
+
+        for item, is_elite in bucket_result:
+            if item["id"] not in sampled_ids:
+                sampled.append((item, is_elite))
+                sampled_ids.add(item["id"])
+
+        used_ids_in_bucket = {item["id"] for item, _ in bucket_result}
+        leftover = [item for item in bucket if item["id"] not in used_ids_in_bucket]
+        remaining_items.extend(leftover)
+
+    rng.shuffle(remaining_items)
+    for item in remaining_items:
+        if len(sampled) >= total_needed:
+            break
+        if item["id"] not in sampled_ids:
+            is_elite = item["data"].get("mode") == "Elite"
+            sampled.append((item, is_elite))
+            sampled_ids.add(item["id"])
+
+    return sampled
 
 
 def sample_from_buckets(buckets, total_needed, rng):
@@ -149,9 +261,15 @@ def sampler(achievements, seed, difficulty, selected_cat1, selected_faction_cat2
 
     rng = random.Random(seed_int)
 
-    difficulty_code = "n" if difficulty == "Normal" else "e"
+    if difficulty == "Normal":
+        difficulty_code = "n"
+    elif difficulty == "Mixed":
+        difficulty_code = "m"
+    else:
+        difficulty_code = "e"
 
-    bingo_id = get_bingo_achievement_id(achievements, difficulty_code)
+    bingo_difficulty_code = "n" if difficulty == "Normal" else "e"
+    bingo_id = get_bingo_achievement_id(achievements, bingo_difficulty_code)
     if bingo_id is None:
         return None
 
@@ -159,13 +277,23 @@ def sampler(achievements, seed, difficulty, selected_cat1, selected_faction_cat2
 
     buckets = group_pool_by_bucket(pool)
 
-    sampled_items = sample_from_buckets(buckets, 24, rng)
+    if difficulty_code == "m":
+        sampled_with_elite = sample_from_buckets_mixed(buckets, 24, rng)
+        rng.shuffle(sampled_with_elite)
 
-    rng.shuffle(sampled_items)
+        result = [difficulty_code, (bingo_id, True)]
+        for item, is_elite in sampled_with_elite:
+            result.append((item["id"], is_elite))
+    else:
+        sampled_items = sample_from_buckets(buckets, 24, rng)
+        rng.shuffle(sampled_items)
 
-    result = [difficulty_code, bingo_id]
-    for item in sampled_items:
-        result.append(item["id"])
+        is_elite = difficulty_code == "e"
+        result = [difficulty_code, (bingo_id, is_elite)]
+        for item in sampled_items:
+            item_mode = item["data"].get("mode")
+            item_is_elite = is_elite or item_mode == "Elite"
+            result.append((item["id"], item_is_elite))
 
     return result
 
@@ -189,7 +317,7 @@ def get_icon_path(icon_name):
     return None
 
 
-def format_cell_content(achievement, difficulty_code):
+def format_cell_content(achievement, is_elite):
     name = achievement.get("name") or "Unnamed"
     window = achievement.get("window") or ""
     base = achievement.get("base") or ""
@@ -197,12 +325,12 @@ def format_cell_content(achievement, difficulty_code):
     elite = achievement.get("elite")
     icon = achievement.get("icon")
 
-    if difficulty_code == "n" and normal:
-        base_text = base.replace("{x}", str(normal))
-    elif difficulty_code == "e" and elite:
+    if is_elite and elite:
         base_text = base.replace("{x}", str(elite))
+    elif not is_elite and normal:
+        base_text = base.replace("{x}", str(normal))
     elif normal and elite:
-        value = normal if difficulty_code == "n" else elite
+        value = elite if is_elite else normal
         base_text = base.replace("{x}", str(value))
     else:
         base_text = base.replace("{x}", "")
@@ -218,18 +346,19 @@ def grid_placer(achievements, sampled_list):
         return None
 
     difficulty_code = sampled_list[0]
-    bingo_id = sampled_list[1]
-    other_ids = sampled_list[2:]
+    bingo_id, bingo_is_elite = sampled_list[1]
+    other_items = sampled_list[2:]
 
     grid = [[None for _ in range(5)] for _ in range(5)]
 
     bingo_achievement = get_achievement_by_id(achievements, bingo_id)
     if bingo_achievement:
-        icon_text, name, content = format_cell_content(bingo_achievement, difficulty_code)
+        icon_text, name, content = format_cell_content(bingo_achievement, bingo_is_elite)
         grid[2][2] = {
             "icon": icon_text,
             "name": name,
-            "content": content
+            "content": content,
+            "is_elite": bingo_is_elite
         }
 
     idx = 0
@@ -238,16 +367,17 @@ def grid_placer(achievements, sampled_list):
             if row == 2 and col == 2:
                 continue
 
-            if idx < len(other_ids):
-                achievement_id = other_ids[idx]
+            if idx < len(other_items):
+                achievement_id, is_elite = other_items[idx]
                 achievement = get_achievement_by_id(achievements, achievement_id)
 
                 if achievement:
-                    icon_text, name, content = format_cell_content(achievement, difficulty_code)
+                    icon_text, name, content = format_cell_content(achievement, is_elite)
                     grid[row][col] = {
                         "icon": icon_text,
                         "name": name,
-                        "content": content
+                        "content": content,
+                        "is_elite": is_elite
                     }
 
                 idx += 1
@@ -271,7 +401,10 @@ def render_bingo_grid(grid):
                         st.image(icon_path, width=50)
                     else:
                         st.markdown("*(no icon)*")
-                    st.markdown(f"**{cell['name']}**")
+                    if cell.get("is_elite"):
+                        st.markdown(f"**<u>{cell['name']}</u>**", unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"**{cell['name']}**")
                     st.markdown(f"{cell['content']}")
                 else:
                     st.markdown("---")
@@ -342,7 +475,10 @@ def generate_pdf(grid, seed_value, difficulty_text):
                     except Exception:
                         pass
 
-                name_para = Paragraph(cell["name"], name_style)
+                name_text = cell["name"]
+                if cell.get("is_elite"):
+                    name_text = f"<u>{name_text}</u>"
+                name_para = Paragraph(name_text, name_style)
                 cell_elements.append(name_para)
 
                 content_para = Paragraph(cell["content"], content_style)
@@ -403,9 +539,11 @@ def render():
         )
 
     with col2:
-        difficulty = st.toggle("Elite Mode", value=False)
-        difficulty_text = "Elite" if difficulty else "Normal"
-        st.caption(f"Difficulty: {difficulty_text}")
+        difficulty_text = st.selectbox(
+            "Difficulty",
+            options=["Normal", "Mixed", "Hard"],
+            index=0
+        )
 
     default_cat1 = ["General"]
     if "Faction" in category1_keys:

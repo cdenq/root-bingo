@@ -6,7 +6,7 @@
                 "icon": "-cat",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "`Battle` {x} times as the attacker",
+                "base": "Battle {x} times as the attacker",
                 "normal": "3",
                 "elite": "5",
                 "notes": null
@@ -26,17 +26,17 @@
                 "icon": "-cat",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "`Field Hospital` a total of at least {x} warriors",
+                "base": "Field Hospital a total of at least {x} warriors",
                 "normal": "4",
                 "elite": "7",
                 "notes": null
             },
             "28": {
-                "name": "Just Me & My Bodyguards",
+                "name": "Just Me & My 300 Bodyguards",
                 "icon": "-cat",
                 "mode": "Both",
-                "window": "At any point",
-                "base": "End your turn with at least {x} warriors in one clearing",
+                "window": "At end of a turn",
+                "base": "Have at least {x} warriors in one clearing",
                 "normal": "10",
                 "elite": "20",
                 "notes": null
@@ -46,7 +46,7 @@
                 "icon": "-cat",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "Remove at least {x} `Wood` to `Build`",
+                "base": "Remove at least {x} Wood to Build",
                 "normal": "4",
                 "elite": "8",
                 "notes": null
@@ -56,19 +56,39 @@
                 "icon": "-cat",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win having never built a `Sawmill`",
+                "base": "Win having never built a Sawmill",
                 "normal": null,
                 "elite": null,
-                "notes": "Initial placement does not count; `Overwork` is allowed"
+                "notes": "Initial placement does not count; Overwork is allowed"
             },
             "40": {
                 "name": "Homeless",
                 "icon": "-cat",
-                "mode": "Normal",
+                "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win without the `Keep` token on the board",
+                "base": "Win without the Keep token on the board",
                 "normal": null,
                 "elite": null,
+                "notes": null
+            },
+            "127": {
+                "name": "Metropolis",
+                "icon": "-cat",
+                "mode": "Both",
+                "window": "Simultaneously",
+                "base": "Have at least {x} Sawmills, Workshops, and Recruiters built/on the board",
+                "normal": "2",
+                "elite": "3",
+                "notes": null
+            },
+            "146": {
+                "name": "Forced Partisans",
+                "icon": "-cat",
+                "mode": "Both",
+                "window": "In a single turn ",
+                "base": "Draw at least {x} cards",
+                "normal": "2",
+                "elite": "4",
                 "notes": null
             }
         },
@@ -77,18 +97,18 @@
                 "name": "Big Promises",
                 "icon": "-bird",
                 "mode": "Both",
-                "window": "Simultaneously",
-                "base": "Have {x} cards in your `Decree`",
+                "window": "At end of a turn",
+                "base": "Have {x} cards in your Decree",
                 "normal": "10",
                 "elite": "15",
-                "notes": "Includes `Royal Viziers`"
+                "notes": "Includes Royal Viziers"
             },
             "30": {
                 "name": "Crafts-bird",
                 "icon": "-bird",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "Gain at least {x} points from `Craft`ing items",
+                "base": "Gain at least {x} points from Crafting items",
                 "normal": "4",
                 "elite": "7",
                 "notes": null
@@ -98,7 +118,7 @@
                 "icon": "-bird",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "`Recruit` at least {x} warriors",
+                "base": "Recruit at least {x} warriors",
                 "normal": "4",
                 "elite": "8",
                 "notes": null
@@ -107,8 +127,8 @@
                 "name": "Avian Empire",
                 "icon": "-bird",
                 "mode": "Both",
-                "window": "Simultaneously",
-                "base": "Have all 7 `Roost`s built/on the board",
+                "window": "At end of a turn",
+                "base": "Have all 7 Roosts built/on the board",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -117,18 +137,18 @@
                 "name": "Loyalist",
                 "icon": "-bird",
                 "mode": "Both",
-                "window": "Simultaneously",
-                "base": "Have at least {x} Bird cards in your `Decree`",
+                "window": "At end of a turn",
+                "base": "Have at least {x} Bird cards in your Decree",
                 "normal": "6",
                 "elite": "8",
-                "notes": "Includes `Royal Viziers`"
+                "notes": "Includes Royal Viziers"
             },
             "34": {
                 "name": "Architect",
                 "icon": "-bird",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "`Build` at least {x} `Roost`s",
+                "base": "Build at least {x} Roosts",
                 "normal": "3",
                 "elite": "4",
                 "notes": null
@@ -138,17 +158,17 @@
                 "icon": "-bird",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win having never added Bird cards to your `Decree`",
+                "base": "Win having never added Bird cards to your Decree",
                 "normal": null,
                 "elite": null,
-                "notes": "Excluding `Royal Viziers`"
+                "notes": "Excludes Royal Viziers"
             },
             "36": {
                 "name": "War Hawk",
                 "icon": "-bird",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "`Battle` at least {x} times as the attacker",
+                "base": "Battle at least {x} times as the attacker",
                 "normal": "4",
                 "elite": "6",
                 "notes": null
@@ -158,7 +178,7 @@
                 "icon": "-bird",
                 "mode": "Normal",
                 "window": "At end of game",
-                "base": "Win having never `Turmoil`ed",
+                "base": "Finish having never Turmoiled",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -168,7 +188,57 @@
                 "icon": "-bird",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win having `Turmoil`ed at least 4 times",
+                "base": "Win having Turmoiled at least 4 times",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "126": {
+                "name": "Royal Claim",
+                "icon": "-bird",
+                "mode": "Both",
+                "window": "At the end of turn",
+                "base": "Rule {x} clearings",
+                "normal": "5",
+                "elite": "8",
+                "notes": null
+            },
+            "128": {
+                "name": "Bureaucratic Leadership",
+                "icon": "-bird",
+                "mode": "Both",
+                "window": "At end of game",
+                "base": "{x} while having never added more than 1 card per turn to your Decree",
+                "normal": "Finish",
+                "elite": "Win",
+                "notes": null
+            },
+            "129": {
+                "name": "Emergency Policies",
+                "icon": "-bird",
+                "mode": "Elite",
+                "window": "At start of a turn",
+                "base": "Have 0 cards in your Hand",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "136": {
+                "name": "Pride Parade",
+                "icon": "-bird",
+                "mode": "Normal",
+                "window": "Simultaneously",
+                "base": "Have at least 2 cards of every suit in the Move column of the Decree",
+                "normal": null,
+                "elite": null,
+                "notes": "Includes Royal Viziers"
+            },
+            "145": {
+                "name": "Open Policies",
+                "icon": "-bird",
+                "mode": "Normal",
+                "window": "At end of game",
+                "base": "Finish having never added a suited card to the Recruit, Battle, or Build columns of the Decree",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -178,7 +248,7 @@
             "3": {
                 "name": "Long Distance",
                 "icon": "-wa",
-                "mode": "Both",
+                "mode": "Elite",
                 "window": "Simultaneously",
                 "base": "Have 2 bases on the opposite corners of the map",
                 "normal": null,
@@ -190,7 +260,7 @@
                 "icon": "-wa",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win the game off of a `Battle` as attacker",
+                "base": "Win off of a Battle as attacker",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -200,7 +270,7 @@
                 "icon": "-wa",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "Spend at least {x} cards from your `Supporters` deck",
+                "base": "Spend at least {x} cards from your Supporters deck",
                 "normal": "8",
                 "elite": "12",
                 "notes": null
@@ -210,7 +280,7 @@
                 "icon": "-wa",
                 "mode": "Normal",
                 "window": "Simultaneously",
-                "base": "Have all 3 `Bases` built/on the board",
+                "base": "Have all 3 Bases built/on the board",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -220,7 +290,7 @@
                 "icon": "-wa",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win with no `Bases` built/on the board",
+                "base": "Win with no Bases built/on the board",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -228,9 +298,9 @@
             "45": {
                 "name": "Four Corners of the World",
                 "icon": "-wa",
-                "mode": "Both",
+                "mode": "Elite",
                 "window": "Simultaneously",
-                "base": "Have a `Sympathy` token in all four corners of the map",
+                "base": "Have a Sympathy token in all four corners of the map",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -239,7 +309,7 @@
                 "name": "Coup",
                 "icon": "-wa",
                 "mode": "Both",
-                "window": "In a single `Battle`",
+                "window": "In a single Battle",
                 "base": "Remove at least {x} enemy warriors as attacker",
                 "normal": "2",
                 "elite": "4",
@@ -249,10 +319,40 @@
                 "name": "Remember the Alamo",
                 "icon": "-wa",
                 "mode": "Both",
-                "window": "In a single `Battle`",
+                "window": "In a single Battle",
                 "base": "Remove at least {x} enemy warriors as defender",
                 "normal": "3",
                 "elite": "5",
+                "notes": null
+            },
+            "155": {
+                "name": "People's Government",
+                "icon": "-wa",
+                "mode": "Normal",
+                "window": "Simultaneously",
+                "base": "Have at least 5 Officers",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "156": {
+                "name": "Decentralized Authority",
+                "icon": "-wa",
+                "mode": "Elite",
+                "window": "At end of game",
+                "base": "Win with at most 2 Officers",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "157": {
+                "name": "Remember the Alamo",
+                "icon": "-wa",
+                "mode": "Both",
+                "window": "In a single turn ",
+                "base": "Gain at least {x} points from placing Sympathy and/or Organizing",
+                "normal": "8",
+                "elite": "14",
                 "notes": null
             }
         },
@@ -262,7 +362,7 @@
                 "icon": "-vb",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least 1 of every single item type in your `Satchel` and/or player board",
+                "base": "Have at least 1 of every single item type in your Satchel and/or player board",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -272,9 +372,9 @@
                 "icon": "-vb",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Be `Allied` with 3 separate Factions",
-                "normal": null,
-                "elite": null,
+                "base": "Be Allied with at least {x} of the enemy Factions",
+                "normal": "1",
+                "elite": "2",
                 "notes": null
             },
             "48": {
@@ -282,7 +382,7 @@
                 "icon": "-vb",
                 "mode": "Normal",
                 "window": "Simultaneously",
-                "base": "Have at least 4 `Boot`s and/or 3 `Bag`s in your `Crafted Items` Box",
+                "base": "Have at least 4 Boots and/or 3 Bags in your Crafted Items Box",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -292,17 +392,17 @@
                 "icon": "-vb",
                 "mode": "Elite",
                 "window": "Simultaneously",
-                "base": "Have 5 `Boot`s or 5 `Sword`s in your `Crafted Items` Box",
+                "base": "Have 5 Boots or 5 Swords in your Crafted Items Box",
                 "normal": null,
                 "elite": null,
-                "notes": "Must play `Scoundrel`, `Ronin`, or `Arbiter`"
+                "notes": "Must play Scoundrel, Ronin, or Arbiter"
             },
             "50": {
                 "name": "People's Champion",
                 "icon": "-vb",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} `Quest`s of the same suit completed",
+                "base": "Have at least {x} Quests of the same suit completed",
                 "normal": "3",
                 "elite": "5",
                 "notes": null
@@ -312,7 +412,7 @@
                 "icon": "-vb",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "Gain at least {x} points from `Aid`ing",
+                "base": "Gain at least {x} points from Aiding",
                 "normal": "4",
                 "elite": "8",
                 "notes": null
@@ -325,34 +425,34 @@
                 "base": "Move at least 6 warriors of another player's faction",
                 "normal": null,
                 "elite": null,
-                "notes": "Can be from `Allied` move or card"
+                "notes": "Can be from Allied move or card"
             },
             "53": {
                 "name": "Made Amends",
                 "icon": "-vb",
                 "mode": "Normal",
                 "window": "At any point",
-                "base": "Improve the `Relationship` with a `Hostile` player",
+                "base": "Improve the Relationship with a Hostile player",
                 "normal": null,
                 "elite": null,
-                "notes": "Must be with `Dominance` card (`Coalition`)"
+                "notes": "Must be with Dominance card (Coalition)"
             },
             "54": {
                 "name": "Blacksmith",
                 "icon": "-vb",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "`Repair` {x} items",
+                "base": "Repair {x} items",
                 "normal": "3",
                 "elite": "9",
-                "notes": "Can be from `Hammer` or `Evening's Rest`"
+                "notes": "Can be from Hammer or Evening's Rest"
             },
             "97": {
                 "name": "Make Amends?",
                 "icon": "-vb",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "`Aid` a `Hostile` player at least {x} cards",
+                "base": "Aid a Hostile player at least {x} cards",
                 "normal": "1",
                 "elite": "3",
                 "notes": null
@@ -362,10 +462,30 @@
                 "icon": "-vb",
                 "mode": "Elite",
                 "window": "In a single turn ",
-                "base": "Win without ever taking any `Ruins` items",
+                "base": "Win without ever taking any Ruins items",
                 "normal": null,
                 "elite": null,
                 "notes": null
+            },
+            "152": {
+                "name": "Spelunker",
+                "icon": "-vb",
+                "mode": "Normal",
+                "window": "At end of game",
+                "base": "Win with all 4 Ruins items in your Satchel and/or player board",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "153": {
+                "name": "Talentless",
+                "icon": "-vb",
+                "mode": "Both",
+                "window": "At end of game",
+                "base": "On a Character with a Character ability that requires a Torch, {x} without ever using that ability",
+                "normal": "Finish",
+                "elite": "Win",
+                "notes": "Cannot be done with Adventurer, Arbiter, or Ronin"
             }
         },
         "Crows": {
@@ -374,29 +494,29 @@
                 "icon": "-crow",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "Gain at least {x} points from `Flip`ping `Plot`s",
+                "base": "Gain at least {x} points from Flipping Plots",
                 "normal": "6",
                 "elite": "10",
-                "notes": "Points gained from removing pieces from `Bomb`s count"
+                "notes": "Points gained from removing pieces from Bombs count"
             },
             "55": {
                 "name": "Divergent Thinking",
                 "icon": "-crow",
-                "mode": "Both",
-                "window": "At any point",
-                "base": "`Flip` and score the `Bomb` while you have a face-up `Snare`,`Raid`, and `Extortion`",
-                "normal": null,
-                "elite": null,
+                "mode": "Normal",
+                "window": "Simultaneously",
+                "base": "Have at least 1 of every Plot face-up on the board (Bomb will be temporarily face-up when Flipped)",
+                "normal": "1",
+                "elite": "2",
                 "notes": null
             },
             "56": {
                 "name": "Eyes Everywhere",
                 "icon": "-crow",
                 "mode": "Both",
-                "window": "Simultaneously",
-                "base": "Have 1 warrior in every clearing",
-                "normal": null,
-                "elite": null,
+                "window": "At end of game",
+                "base": "{x} while having at least 1 warrior in every clearing",
+                "normal": "Finish",
+                "elite": "Win",
                 "notes": null
             },
             "57": {
@@ -404,7 +524,7 @@
                 "icon": "-crow",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} `Plot`s of the same type face-up on the board",
+                "base": "Have at least {x} Plots of the same type face-up on the board",
                 "normal": "2",
                 "elite": "3",
                 "notes": "Must be played with WT standard"
@@ -414,7 +534,7 @@
                 "icon": "-crow",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win without ever `Flip`ping an `Extortion`",
+                "base": "Win without ever Flipping an Extortion",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -422,11 +542,11 @@
             "59": {
                 "name": "Effortless",
                 "icon": "-crow",
-                "mode": "Normal",
+                "mode": "Both",
                 "window": "At end of game",
-                "base": "Win without ever `Exert`ing",
-                "normal": null,
-                "elite": null,
+                "base": "{x} without ever Exerting",
+                "normal": "Finish",
+                "elite": "Win",
                 "notes": null
             },
             "60": {
@@ -437,7 +557,7 @@
                 "base": "Have at least {x} more Faction warriors on the board than you did last turn",
                 "normal": "5",
                 "elite": "10",
-                "notes": "For Elite mode, must be played on {Autumn map and `Lost City`} or {Mountain map}"
+                "notes": "For Elite mode, must be played on {Autumn map and Lost City} or {Mountain map}"
             },
             "61": {
                 "name": "Sabotage Complete",
@@ -447,42 +567,62 @@
                 "base": "Prevent at least {x} enemy piece(s) from being placed",
                 "normal": "1",
                 "elite": "3",
-                "notes": "Has to be from forced placement (e.g., `Sawmill`s, `Stronghold`s)"
+                "notes": "Has to be from forced placement (e.g., Sawmills, Strongholds)"
+            },
+            "130": {
+                "name": "Sheer Terror",
+                "icon": "-crow",
+                "mode": "Both",
+                "window": "At any point",
+                "base": "Remove {x} enemy pieces with a single Flipped Bomb",
+                "normal": "4",
+                "elite": "8",
+                "notes": null
+            },
+            "131": {
+                "name": "A Murder of…",
+                "icon": "-crow",
+                "mode": "Both",
+                "window": "Simultaneously",
+                "base": "Have at least {x} warriors in one clearing",
+                "normal": "5",
+                "elite": "8",
+                "notes": null
             }
         },
         "Moles": {
             "8": {
-                "name": null,
+                "name": "Government Functions",
                 "icon": "-mole",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win the game without ever `Sway`ing any {x} `Minister`s",
-                "normal": "`Lord`",
-                "elite": "`Noble`",
+                "base": "Win without ever Swaying any {x} Ministers",
+                "normal": "Lord",
+                "elite": "Noble",
                 "notes": null
             },
             "63": {
-                "name": null,
+                "name": "Burned Contacts",
                 "icon": "-mole",
-                "mode": "Both",
+                "mode": "Elite",
                 "window": "In a single turn ",
-                "base": "`Sway` a {x} `Minister` with only Bird cards",
-                "normal": "`Noble`",
-                "elite": "`Lord`",
+                "base": "Sway a Lord with only Bird cards",
+                "normal": null,
+                "elite": null,
                 "notes": null
             },
             "64": {
-                "name": null,
+                "name": "Underground Party",
                 "icon": "-mole",
                 "mode": "Both",
                 "window": "At any point",
-                "base": "End your turn with at least {x} warriors in the `Burrow`",
+                "base": "End your turn with at least {x} warriors in the Burrow",
                 "normal": "8",
                 "elite": "15",
                 "notes": null
             },
             "65": {
-                "name": null,
+                "name": "Sandcastles",
                 "icon": "-mole",
                 "mode": "Both",
                 "window": "Simultaneously",
@@ -492,34 +632,84 @@
                 "notes": null
             },
             "66": {
-                "name": null,
+                "name": "Whacker Moles",
                 "icon": "-mole",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "`Battle` {x} times as the attacker",
+                "base": "Battle {x} times as the attacker",
                 "normal": "4",
                 "elite": "7",
                 "notes": null
             },
             "67": {
-                "name": null,
+                "name": "Filled Senate",
                 "icon": "-mole",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} `Minister`s `Sway`ed",
+                "base": "Have at least {x} Ministers Swayed",
                 "normal": "5",
                 "elite": "8",
-                "notes": "`Minister` cards must still be active"
+                "notes": "Minister cards must still be active"
             },
             "68": {
-                "name": null,
+                "name": "Equal Representation",
                 "icon": "-otter",
                 "mode": "Both",
                 "window": "Simultaneously",
                 "base": "Have at least 1 building built/on the board in {x} different suits and clearings",
                 "normal": "2",
                 "elite": "3",
-                "notes": "`Lost City` does not count"
+                "notes": "Lost City does not count"
+            },
+            "139": {
+                "name": "Preserving the Count",
+                "icon": "-mole",
+                "mode": "Normal",
+                "window": "In a single turn",
+                "base": "Use the Dominance Swap effect at least 2 times",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "140": {
+                "name": "Total Parliament",
+                "icon": "-mole",
+                "mode": "Normal",
+                "window": "In a single turn ",
+                "base": "Use the effect of at least 2 Squires, Nobles, and Lords",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "141": {
+                "name": "Escape Plans",
+                "icon": "-mole",
+                "mode": "Normal",
+                "window": "At end of game",
+                "base": "Finish with a Tunnel in all clearings with a Citadel and/or Market",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "142": {
+                "name": "Riskless Expeditions",
+                "icon": "-mole",
+                "mode": "Both",
+                "window": "At end of game",
+                "base": "{x} having never triggered Price of Failure",
+                "normal": "Finish",
+                "elite": "Win",
+                "notes": null
+            },
+            "144": {
+                "name": "Anti-Artisanship",
+                "icon": "-mole",
+                "mode": "Elite",
+                "window": "At end of game",
+                "base": "Win having never Crafted any items",
+                "normal": null,
+                "elite": null,
+                "notes": null
             }
         },
         "Lizards": {
@@ -528,7 +718,7 @@
                 "icon": "-lizard",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "`Santify` at least {x} buildings",
+                "base": "Santify at least {x} buildings",
                 "normal": "2",
                 "elite": "4",
                 "notes": null
@@ -538,7 +728,7 @@
                 "icon": "-lizard",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} `Acolyte`s",
+                "base": "Have at least {x} Acolytes",
                 "normal": "8",
                 "elite": "12",
                 "notes": null
@@ -558,7 +748,7 @@
                 "icon": "-lizard",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win without ever taking `Conspiracies` under a `Hated Outcast`",
+                "base": "Win without ever taking Conspiracies under a Hated Outcast",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -571,14 +761,14 @@
                 "base": "Have NO warriors left in your supply",
                 "normal": null,
                 "elite": null,
-                "notes": "Can be as `Acolyte`s, warriors, in `Coffin Makers`, on other playerboards, etc."
+                "notes": "Can be as Acolytes, warriors, in Coffin Makers, on other playerboards, etc."
             },
             "74": {
                 "name": "Horticulture",
                 "icon": "-lizard",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} `Garden`s of the same suit built/on the board",
+                "base": "Have at least {x} Gardens of the same suit built/on the board",
                 "normal": "4",
                 "elite": "5",
                 "notes": null
@@ -588,9 +778,79 @@
                 "icon": "-lizard",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "`Crusade` at least {x} warriors into one clearing",
+                "base": "Crusade at least {x} warriors into one clearing",
                 "normal": "6",
                 "elite": "10",
+                "notes": null
+            },
+            "132": {
+                "name": "Stubborn",
+                "icon": "-lizard",
+                "mode": "Elite",
+                "window": "At end of game",
+                "base": "Win having never used Dominance Swap",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "133": {
+                "name": "Adapt and Overcome",
+                "icon": "-lizard",
+                "mode": "Normal",
+                "window": "In a single turn",
+                "base": "Use the Dominance Swap effect at least 2 times",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "134": {
+                "name": "Mega Church",
+                "icon": "-lizard",
+                "mode": "Both",
+                "window": "Simultaneously",
+                "base": "Have at least {x} warriors in one clearing",
+                "normal": "8",
+                "elite": "12",
+                "notes": null
+            },
+            "135": {
+                "name": "Targeted Proselytizing",
+                "icon": "-lizard",
+                "mode": "Elite",
+                "window": "At end of game",
+                "base": "Win having only ever Recruited in one suit",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "137": {
+                "name": "Multi-cultural Cults",
+                "icon": "-lizard",
+                "mode": "Normal",
+                "window": "In a single turn ",
+                "base": "Convert at least 1 warrior from every other enemy Faction",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "138": {
+                "name": "Underwing Media",
+                "icon": "-lizard",
+                "mode": "Normal",
+                "window": "At start of a turn",
+                "base": "Change the distribution of the Lost Souls deck such that it changes the suit of the current Outcast",
+                "normal": null,
+                "elite": null,
+                "notes": "Use False Orders"
+            },
+            "143": {
+                "name": "Devotion Unwavering",
+                "icon": "-lizard",
+                "mode": "Elite",
+                "window": "At end of game",
+                "base": "Win having never triggered Fear of the Faithful",
+                "normal": null,
+                "elite": null,
                 "notes": null
             }
         },
@@ -598,11 +858,11 @@
             "76": {
                 "name": "Self-Made",
                 "icon": "-otter",
-                "mode": "Both",
-                "window": "In a single turn",
-                "base": "`Export` at least {x} cards",
-                "normal": "2",
-                "elite": "4",
+                "mode": "Elite",
+                "window": "At end of game",
+                "base": "Win having Exported at least 2 cards in that last turn",
+                "normal": null,
+                "elite": null,
                 "notes": null
             },
             "77": {
@@ -610,7 +870,7 @@
                 "icon": "-otter",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} `Trade Post`s built",
+                "base": "Have at least {x} Trade Posts built",
                 "normal": "5",
                 "elite": "9",
                 "notes": null
@@ -620,7 +880,7 @@
                 "icon": "-otter",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "Gain at least {x} points from `Dividends`",
+                "base": "Gain at least {x} points from Dividends",
                 "normal": "2",
                 "elite": "4",
                 "notes": null
@@ -640,7 +900,7 @@
                 "icon": "-otter",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win without ever placing a `Trade Post`",
+                "base": "Win without ever placing a Trade Post",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -650,9 +910,59 @@
                 "icon": "-otter",
                 "mode": "Both",
                 "window": "At any point",
-                "base": "Have another player complete a single `Purchase` that costed at least {x} funds",
+                "base": "Have another player complete a single Purchase that costed at least {x} funds",
                 "normal": "3",
                 "elite": "4",
+                "notes": null
+            },
+            "147": {
+                "name": "Steady Expansion",
+                "icon": "-otter",
+                "mode": "Normal",
+                "window": "At end of game",
+                "base": "Finish without ever placing more than 1 Trade Post a turn",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "148": {
+                "name": "Fishing Expedition",
+                "icon": "-otter",
+                "mode": "Both",
+                "window": "In a single turn ",
+                "base": "Draw at least {x} cards",
+                "normal": "6",
+                "elite": "12",
+                "notes": null
+            },
+            "149": {
+                "name": "Assisted Frontline",
+                "icon": "-otter",
+                "mode": "Both",
+                "window": "In a single turn ",
+                "base": "Remove at least {x} warriors on an opponents turn through Mercenaries",
+                "normal": "2",
+                "elite": "3",
+                "notes": null
+            },
+            "150": {
+                "name": "Diverse Offerings",
+                "icon": "-otter",
+                "mode": "Both",
+                "window": "At end of game",
+                "base": "{x} having sold every Service at least once",
+                "normal": "Finish",
+                "elite": "Win",
+                "notes": null
+            },
+            "151": {
+                "name": "Aquaphobic",
+                "icon": "-otter",
+                "mode": "Both",
+                "window": "At end of game",
+                "base": "{x} having never used Swimmers",
+                "normal": "Finish",
+                "elite": "Win",
                 "notes": null
             }
         },
@@ -662,67 +972,67 @@
                 "icon": "-rat",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have every item-based `Mood` unavailable for selection",
+                "base": "Have every item-based Mood unavailable for selection",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "83": {
-                "name": null,
+                "name": "Pillager",
                 "icon": "-rat",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "Gain at least {x} items from `Looters`",
+                "base": "Gain at least {x} items from Looters",
                 "normal": "2",
                 "elite": "3",
                 "notes": null
             },
             "84": {
-                "name": null,
+                "name": "Tomb Raider",
                 "icon": "-rat",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} `Ruins` items in your `Hoard`",
+                "base": "Have at least {x} Ruins items in your Hoard",
                 "normal": "3",
                 "elite": "4",
                 "notes": null
             },
             "85": {
-                "name": null,
+                "name": "Moshpit",
                 "icon": "-rat",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} `Mob` tokens placed/on the board",
+                "base": "Have at least {x} Mob tokens placed/on the board",
                 "normal": "3",
                 "elite": "5",
                 "notes": null
             },
             "86": {
-                "name": null,
+                "name": "All Are Equal, But Some Are More Equal",
                 "icon": "-rat",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "`Oppress` at least {x} clearings at the end of the turn",
+                "base": "Oppress at least {x} clearings at the end of the turn",
                 "normal": "5",
                 "elite": "7",
                 "notes": null
             },
             "87": {
-                "name": null,
+                "name": "Self-Limiting Power",
                 "icon": "-rat",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win without ever going higher than {x} on both the`Command` and `Prowess` tracks",
+                "base": "Win without ever going higher than {x} on both the Command and Prowess tracks",
                 "normal": "2",
                 "elite": "1",
                 "notes": null
             },
             "88": {
-                "name": null,
+                "name": "The Great Wall",
                 "icon": "-rat",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} `Stronghold`s built/on the board",
+                "base": "Have at least {x} Strongholds built/on the board",
                 "normal": "3",
                 "elite": "6",
                 "notes": null
@@ -732,7 +1042,7 @@
                 "icon": "-rat",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "`Battle` {x} times as the attacker",
+                "base": "Battle {x} times as the attacker",
                 "normal": "4",
                 "elite": "7",
                 "notes": null
@@ -742,17 +1052,17 @@
                 "icon": "-rat",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "`Recruit` at least {x} warriors",
+                "base": "Recruit at least {x} warriors",
                 "normal": "4",
                 "elite": "8",
                 "notes": null
             },
             "99": {
-                "name": null,
+                "name": "Immortal",
                 "icon": "-rat",
                 "mode": "Normal",
                 "window": "At end of game",
-                "base": "Win without ever losing your `Warlord`",
+                "base": "Win without ever losing your Warlord",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -772,17 +1082,27 @@
                 "icon": "-rat",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win having only ever choosen the `Jubiliant` and `Lavish` moods",
+                "base": "Win having only ever choosen the Jubiliant and Lavish moods",
                 "normal": null,
                 "elite": null,
-                "notes": "The starting `Stubborn` mood does not count"
+                "notes": "The starting Stubborn mood does not count"
             },
             "116": {
                 "name": "Lazy General",
                 "icon": "-rat",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win without ever moving your`Warlord` from its starting clearing",
+                "base": "Win without ever moving yourWarlord from its starting clearing",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "154": {
+                "name": "Tyranny",
+                "icon": "-rat",
+                "mode": "Normal",
+                "window": "At end of game",
+                "base": "Finish a game having taken points off of Oppression every single turn",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -792,9 +1112,9 @@
             "91": {
                 "name": "Nomadic",
                 "icon": "-badger",
-                "mode": "Both",
-                "window": "At end of game",
-                "base": "Win without currently have any `Waystation`s on the board",
+                "mode": "Elite",
+                "window": "In a single turn ",
+                "base": "Decamp 3 Waystations that were previously on the board",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -804,17 +1124,17 @@
                 "icon": "-badger",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win having never added Bird cards to your `Retinue`",
+                "base": "Win having never added Bird cards to your Retinue",
                 "normal": null,
                 "elite": null,
-                "notes": "Starting `Faithful Retainer`s do not count"
+                "notes": "Excludes Faithful Retainers"
             },
             "93": {
                 "name": "Purity of Zeal",
                 "icon": "-badger",
-                "mode": "Normal",
+                "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win having only ever added Bird cards to your `Retinue`",
+                "base": "Finish having only ever added Bird cards to your Retinue",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -823,8 +1143,8 @@
                 "name": "Open Museum",
                 "icon": "-badger",
                 "mode": "Both",
-                "window": "In a single turn",
-                "base": "Start your turn with at least {x} `Relic`s in any clearings",
+                "window": "At start of a turn",
+                "base": "Have at least {x} un-Recovered Relics in any clearings",
                 "normal": "2",
                 "elite": "4",
                 "notes": null
@@ -834,7 +1154,7 @@
                 "icon": "-badger",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "`Recruit` at least {x} warriors",
+                "base": "Recruit at least {x} warriors",
                 "normal": "6",
                 "elite": "8",
                 "notes": null
@@ -844,17 +1164,17 @@
                 "icon": "-badger",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "Gain at least {x} points",
+                "base": "Gain at least {x} points from Recover and column bonuses",
                 "normal": "6",
                 "elite": "12",
                 "notes": null
             },
             "102": {
-                "name": "The Faithful Endure",
+                "name": "Endurance of the Faithful",
                 "icon": "-badger",
                 "mode": "Normal",
                 "window": "At end of game",
-                "base": "Win with all 3 of your `Faithful Retainer`s still in the `Retinue`",
+                "base": "Finish with all 3 of your Faithful Retainers still in the Retinue",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -864,17 +1184,17 @@
                 "icon": "-badger",
                 "mode": "Both",
                 "window": "In a single turn ",
-                "base": "Add at least {x} cards to the `Retinue`",
+                "base": "Add at least {x} cards to the Retinue",
                 "normal": "4",
                 "elite": "6",
                 "notes": null
             },
             "104": {
-                "name": "No Sacrifice Needed",
+                "name": "No Badger Left Behind",
                 "icon": "-badger",
                 "mode": "Normal",
                 "window": "At end of game",
-                "base": "Win without ever losing any warriors to `Living off the Land`",
+                "base": "Finish without ever losing any warriors to Living off the Land",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -884,17 +1204,17 @@
                 "icon": "-badger",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win having only `Recover`ed 1 type of `Relic`",
+                "base": "Win having Recovered no more than 1 type of Relic",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "106": {
-                "name": "Reclamation!",
+                "name": "Diverse Collector",
                 "icon": "-badger",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "`Recover` at least {x} unique types of `Relic`s",
+                "base": "Recover at least {x} unique types of Relics",
                 "normal": "2",
                 "elite": "3",
                 "notes": null
@@ -902,9 +1222,9 @@
             "107": {
                 "name": "Pilgrimage",
                 "icon": "-badger",
-                "mode": "Both",
-                "window": "Simultaneously",
-                "base": "Have 2 `Waystation`s on opposite corners of the map",
+                "mode": "Elite",
+                "window": "At end of a turn",
+                "base": "Have 2 Waystations on opposite corners of the map",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -913,10 +1233,40 @@
                 "name": "The Order Assembled",
                 "icon": "-badger",
                 "mode": "Both",
-                "window": "At any point",
-                "base": "End your turn with at least {x} warriors in one clearing",
+                "window": "At end of a turn",
+                "base": "Have at least {x} warriors in one clearing",
                 "normal": "6",
                 "elite": "12",
+                "notes": null
+            },
+            "123": {
+                "name": "Nomadic",
+                "icon": "-badger",
+                "mode": "Elite",
+                "window": "At end of game",
+                "base": "Win while there are no Relics in any Forests (all Relics must be either Delved or Recovered)",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "124": {
+                "name": "War Priests",
+                "icon": "-badger",
+                "mode": "Normal",
+                "window": "In a single Battle",
+                "base": "Remove at least 3 enemy pieces from a clearing with a Relic as attacker",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "125": {
+                "name": "Supply Chain Command",
+                "icon": "-badger",
+                "mode": "Normal",
+                "window": "In a single turn ",
+                "base": "Do not remove any cards from your Retinue while you have at least 8 cards in the Retinue",
+                "normal": null,
+                "elite": null,
                 "notes": null
             }
         }
@@ -924,117 +1274,117 @@
     "General": {
         "Gameplay": {
             "9": {
-                "name": null,
+                "name": "Indomitable",
                 "icon": "-game",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win with a `Dominance`",
+                "base": "Win with a Dominance",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "10": {
-                "name": null,
+                "name": "Friends? In This Woodland?",
                 "icon": "-game",
                 "mode": "Normal",
                 "window": "At end of game",
-                "base": "Win while in a `Coalition`",
+                "base": "Win while in a Coalition",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "11": {
-                "name": null,
+                "name": "Pacifist",
                 "icon": "-game",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win while never being an attacker in `Battle`",
+                "base": "Win while never being an attacker in Battle",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "12": {
-                "name": null,
+                "name": "Cross-Faction Collusion?!",
                 "icon": "-game",
                 "mode": "Both",
-                "window": "In a single turn",
-                "base": "Gain {x} point(s) on while it is not your own turn",
+                "window": "At start of a turn",
+                "base": "Have gained at least {x} point(s) after the end of your last turn",
                 "normal": "1",
                 "elite": "2",
                 "notes": null
             },
             "13": {
-                "name": null,
+                "name": "Something's Fishy…",
                 "icon": "-game",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "Play {x} `Ambush!`es",
+                "base": "Play {x} Ambushes",
                 "normal": "2",
                 "elite": "3",
                 "notes": null
             },
             "14": {
-                "name": null,
+                "name": "Point Salad",
                 "icon": "-game",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "Gain {x} points from `Craft`ing or removing enemy pieces",
+                "base": "Gain {x} points from Crafting or removing enemy pieces",
                 "normal": "4",
                 "elite": "7",
                 "notes": null
             },
             "15": {
-                "name": null,
+                "name": "Quickdraw",
                 "icon": "-game",
                 "mode": "Both",
                 "window": "In a single turn",
                 "base": "Add {x} new cards to your Hand",
                 "normal": "4",
                 "elite": "6",
-                "notes": "Can be from Draws, `Aid`s, `Purchase`s, or any exchanges from `Swap Meet` or `Black Market`"
+                "notes": "Can be from Draws, Aids, Purchases, or any exchanges from Swap Meet or Black Market"
             },
             "16": {
-                "name": null,
+                "name": "Forced Disassembly",
                 "icon": "-game",
                 "mode": "Both",
-                "window": "In a single `Battle`",
+                "window": "In a single Battle",
                 "base": "Remove at least {x} enemy tokens and/or buildings",
                 "normal": "2",
                 "elite": "3",
                 "notes": null
             },
             "17": {
-                "name": null,
+                "name": "Carnage",
                 "icon": "-game",
                 "mode": "Both",
-                "window": "In a single `Battle`",
+                "window": "In a single Battle",
                 "base": "Remove at least {x} enemy warriors",
                 "normal": "4",
                 "elite": "6",
                 "notes": null
             },
             "18": {
-                "name": null,
+                "name": "5 Ways to Win",
                 "icon": "-game",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "Have at least {x} `Dominance` cards in your Hand",
+                "base": "Have at least {x} Dominance cards in your Hand",
                 "normal": "3",
                 "elite": "4",
                 "notes": null
             },
             "19": {
-                "name": null,
+                "name": "Armory for One",
                 "icon": "-game",
                 "mode": "Both",
                 "window": "Simultaneously",
-                "base": "Have at least {x} items in your `Crafted Items` box",
+                "base": "Have at least {x} items in your Crafted Items box",
                 "normal": "4",
                 "elite": "6",
-                "notes": "VB and Rats cannot get this achievement, as they do not have a `Crafted Items` box"
+                "notes": "VB and Rats cannot get this achievement, as they do not have a Crafted Items box"
             },
             "20": {
-                "name": null,
+                "name": "Well-Connected",
                 "icon": "-game",
                 "mode": "Both",
                 "window": "Simultaneously",
@@ -1044,30 +1394,30 @@
                 "notes": null
             },
             "21": {
-                "name": null,
+                "name": "The Armies of Isen…?",
                 "icon": "-game",
                 "mode": "Both",
                 "window": "Simultaneously",
                 "base": "Have ALL your Faction warriors as warriors on the board",
                 "normal": null,
                 "elite": null,
-                "notes": "On the player board (`Acolyte`s, funds, `Officer`s, etc.) do not count"
+                "notes": "On the player board (Acolytes, funds, Officers, etc.) do not count"
             },
             "22": {
-                "name": null,
+                "name": "Full Counter",
                 "icon": "-game",
                 "mode": "Normal",
-                "window": "In a single `Battle`",
-                "base": "Remove all attacking enemy warriors with an `Ambush!`",
+                "window": "In a single Battle",
+                "base": "Remove all attacking enemy warriors with an Ambush",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "23": {
-                "name": null,
+                "name": "Armored",
                 "icon": "-game",
                 "mode": "Both",
-                "window": "In a single `Battle`",
+                "window": "In a single Battle",
                 "base": "Prevent at least {x} rolled hits",
                 "normal": "1",
                 "elite": "2",
@@ -1084,7 +1434,7 @@
                 "notes": null
             },
             "25": {
-                "name": null,
+                "name": "Double-Edged",
                 "icon": "-game",
                 "mode": "Normal",
                 "window": "At any point",
@@ -1108,7 +1458,7 @@
                 "icon": "-game",
                 "mode": "Both",
                 "window": "In a single turn",
-                "base": "Successfully complete at least {x} `Exposure` guess(es)",
+                "base": "Successfully complete at least {x} Exposure guess(es)",
                 "normal": "1",
                 "elite": "2",
                 "notes": "Must have Crows in the game"
@@ -1118,15 +1468,45 @@
                 "icon": "-game",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win the game without ever `Purchasing` any `Services`",
+                "base": "Win without ever Purchasing any Services",
                 "normal": null,
                 "elite": null,
                 "notes": "Must have Otters in the game"
+            },
+            "158": {
+                "name": "First Blood",
+                "icon": "-game",
+                "mode": "Normal",
+                "window": "At any point",
+                "base": "Be the first person of the game to remove an enemy piece in Batttle",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "159": {
+                "name": "Pacemaker",
+                "icon": "-game",
+                "mode": "Normal",
+                "window": "At any point",
+                "base": "Be the first person of the game to reach 12 points",
+                "normal": null,
+                "elite": null,
+                "notes": null
+            },
+            "160": {
+                "name": "Refreshing",
+                "icon": "-game",
+                "mode": "Normal",
+                "window": "At any point",
+                "base": "Be the first person of the game to trigger the Deck reshuffle",
+                "normal": null,
+                "elite": null,
+                "notes": null
             }
         },
         "Map": {
             "110": {
-                "name": null,
+                "name": "At the Crossroads",
                 "icon": "-map",
                 "mode": "Both",
                 "window": "At end of game",
@@ -1136,7 +1516,7 @@
                 "notes": null
             },
             "111": {
-                "name": null,
+                "name": "Down the River",
                 "icon": "-map",
                 "mode": "Both",
                 "window": "Simultaneously",
@@ -1146,7 +1526,7 @@
                 "notes": null
             },
             "112": {
-                "name": null,
+                "name": "Square the Corners",
                 "icon": "-map",
                 "mode": "Both",
                 "window": "Simultaneously",
@@ -1156,7 +1536,7 @@
                 "notes": null
             },
             "113": {
-                "name": null,
+                "name": "Surround Sound",
                 "icon": "-map",
                 "mode": "Both",
                 "window": "Simultaneously",
@@ -1168,61 +1548,61 @@
         },
         "Landmarks": {
             "114": {
-                "name": null,
+                "name": "My Tower",
                 "icon": "-landmark",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win the game while ruling the `Tower` clearing",
+                "base": "Win while ruling the Tower clearing",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "115": {
-                "name": null,
+                "name": "My City",
                 "icon": "-landmark",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win the game while having a crafting piece in the `Lost City` clearing",
+                "base": "Win while having a crafting piece in the Lost City clearing",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "119": {
-                "name": null,
+                "name": "My Ferry",
                 "icon": "-landmark",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win the game having used the `Ferry` landmark this turn",
+                "base": "Win having used the Ferry landmark this turn",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "120": {
-                "name": null,
+                "name": "My Market",
                 "icon": "-landmark",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win the game while ruling the `Black Market` clearing",
+                "base": "Win having swapped a card at the Black Market this turn",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "121": {
-                "name": null,
+                "name": "My Treetop",
                 "icon": "-landmark",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win the game with a building on the `Elder Treetop` landmark",
+                "base": "Win with a building on the Elder Treetop landmark",
                 "normal": null,
                 "elite": null,
                 "notes": null
             },
             "122": {
-                "name": null,
+                "name": "My Forge",
                 "icon": "-landmark",
                 "mode": "Both",
                 "window": "At end of game",
-                "base": "Win the game while having no items left to `Craft` on the `Legendary Forge` card",
+                "base": "Win while having no items left to Craft on the Legendary Forge card",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -1234,7 +1614,7 @@
                 "icon": "-bingo",
                 "mode": "Elite",
                 "window": "At end of game",
-                "base": "Win the game",
+                "base": "Win a game",
                 "normal": null,
                 "elite": null,
                 "notes": null
@@ -1244,7 +1624,7 @@
                 "icon": "-bingo",
                 "mode": "Normal",
                 "window": "At end of game",
-                "base": "You are not last place or tied for last place in terms of score",
+                "base": "You have at least the second highest (or tied for having the second highest) score in a game",
                 "normal": null,
                 "elite": null,
                 "notes": null
