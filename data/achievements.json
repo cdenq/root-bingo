@@ -653,7 +653,7 @@
             },
             "68": {
                 "name": "Equal Representation",
-                "icon": "-otter",
+                "icon": "-mole",
                 "mode": "Both",
                 "window": "Simultaneously",
                 "base": "Have at least 1 building built/on the board in {x} different suits and clearings",
